@@ -6,7 +6,9 @@
   "version": "1.0.0",
   "description": "Free lance website",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+       "express": "^4.17.1",  
+  },
   "scripts": {
     "start":"node index"
   },
