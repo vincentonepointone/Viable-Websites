@@ -191,17 +191,14 @@ h1 {
         box-shadow: 30px 30px  var(--shadow-color);
     }
 }
-.card-intersect-shadow-mobile{
-    background-color: var(--dark-primary-color);
-    color: white;
-    box-shadow: 30px 30px  var(--shadow-color);
-}
 
 .card-button:hover {
  cursor: pointer;   
 }
 
 .card-button {
+    position: relative;
+    bottom: 5px;
     border-radius: 5px;
     padding: 5px 10px;
     background: var(--text-color);
@@ -315,6 +312,11 @@ footer {
 
     footer {
         display: none;
+    }
+    .card-intersect-shadow-mobile{
+        background-color: var(--dark-primary-color);
+        color: white;
+        box-shadow: 30px 30px  var(--shadow-color);
     }
 
 }
