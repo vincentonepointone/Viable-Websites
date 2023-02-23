@@ -311,6 +311,9 @@ footer {
         height: 8vh;
     }
 
+    footer {
+        display: none;
+    }
     .card-intersect-shadow-mobile{
         background-color: var(--dark-primary-color);
         color: white;
