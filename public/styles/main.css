@@ -145,6 +145,7 @@ nav {
 
 .banner h1, .banner p, .banner h2 {
     text-align: center;
+    opacity: 0; 
 }
 
 h1 {
@@ -310,9 +311,6 @@ footer {
         height: 8vh;
     }
 
-    footer {
-        display: none;
-    }
     .card-intersect-shadow-mobile{
         background-color: var(--dark-primary-color);
         color: white;

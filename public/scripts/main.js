@@ -1,5 +1,6 @@
 window.addEventListener("load", (event) => {
-
+    
+// Main banner slide show
 const slideShowElements = document.querySelector(".text-slideshow").children;
 
 const startSlideShow = function(){
@@ -11,7 +12,7 @@ const startSlideShow = function(){
             element.style.opacity = 0;
         });  
     }
-    hideElements();
+    // hideElements(); //Hiden with CSS
 
     let elementIterator = 0;
     setInterval(() => {
@@ -66,20 +67,15 @@ burgerMenu.addEventListener('click', () => {
     }
 })
 
-// Card Animations when intersecting with the view port
 
+// Card Animations when intersecting with the view port
 let callback = (entries, observer) => {
-    console.log('Intersection observer callback ran!');
     entries.forEach((entry) => {
-        console.log(entry.intersectionRatio)
         if (entry.intersectionRatio > 0.90) {
             entry.target.classList.add("card-intersect-shadow-mobile");
           } else {
-            console.log('ratio is let than 50%')
             entry.target.classList.remove("card-intersect-shadow-mobile");
           }
-      
-
         // Each entry describes an intersection change for one observed
         // target element:
         //   entry.boundingClientRect
@@ -91,18 +87,18 @@ let callback = (entries, observer) => {
         //   entry.time
       });
   };
-  function buildThresholdList() {
-    let thresholds = [];
-    let numSteps = 20;
   
-    for (let i=1.0; i<=numSteps; i++) {
-      let ratio = i/numSteps;
-      thresholds.push(ratio);
-    }
-  
-    thresholds.push(0);
-    return thresholds;
-  }
+function buildThresholdList() {
+let thresholds = [];
+let numSteps = 20;
+
+for (let i=1.0; i<=numSteps; i++) {
+    let ratio = i/numSteps;
+    thresholds.push(ratio);
+}
+thresholds.push(0);
+return thresholds;
+}
   
 let options = {
     root: null,
@@ -110,13 +106,13 @@ let options = {
     threshold: buildThresholdList()
   }
   
-  let observer = new IntersectionObserver(callback, options);
+let observer = new IntersectionObserver(callback, options);
 
-  let target = document.querySelectorAll('.card');
-    observer.observe(target[0]);
-    observer.observe(target[1]);
-    observer.observe(target[2]);
+let target = document.querySelectorAll('.card');
+observer.observe(target[0]);
+observer.observe(target[1]);
+observer.observe(target[2]);
 
-  
 
+// End of onload function
 }, false);
