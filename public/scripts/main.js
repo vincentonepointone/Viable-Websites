@@ -10,17 +10,21 @@ window.addEventListener("load", (event) => {
 let red = 0;
 let green = 0;
 let blue = 0;
-setInterval(ambianceStart, 1)
+setInterval(ambianceStart, 5000 )
 
 function ambianceStart ()  {
     function randomColorParam(){
-        return Math.floor(Math.random() * 256)
+        return Math.floor(80 + Math.random() * 200 - 80)
     }
 
-    let colorz = `rgba(${randomColorParam()},${randomColorParam()},${randomColorParam()},1)`
+    let colorz = `rgba(${randomColorParam()},${randomColorParam()},${randomColorParam()},0.500)`;
+    let secondaryColor = `rgba(${randomColorParam()},${randomColorParam()},${randomColorParam()})`;
     console.log(colorz)
-    document.body.style.background = colorz;
     console.log(red, green , blue)
+
+    var r = document.querySelector(':root');
+    r.style.setProperty('--primary-color', colorz);
+    r.style.setProperty('--secondary-color', secondaryColor);
 }
 
 

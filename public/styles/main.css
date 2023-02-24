@@ -26,6 +26,7 @@ header {
 }
 
 nav {
+    transition: background 7s;
     display: flex;
     align-items: center;
     background-color: var(--primary-color);
@@ -166,6 +167,7 @@ h1 {
 }
 
 .card {
+    transition: background 7s border 7s;
     border: var(--secondary-color) solid 2px;
     background-color: var(--primary-color);
     flex-grow: 1;
@@ -209,6 +211,7 @@ h1 {
 }
 
 footer {
+    transition: background 7s border 7s;
     display: flex;
     background-color: var(--primary-color);
     border-top: var(--secondary-color);
