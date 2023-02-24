@@ -113,7 +113,7 @@ nav {
     padding-inline-start:0;
     flex-grow: 1;
     white-space: nowrap;
-    display:inline;
+    display:flex;
     margin: 0;
 }
 
@@ -210,14 +210,12 @@ h1 {
 
 footer {
     display: flex;
-    height: 20vh;
     background-color: var(--primary-color);
     border-top: var(--secondary-color);
     box-shadow: var(--shadow-color) solid 1px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 30px;
 }
 
 /* Media Queries */
@@ -312,8 +310,21 @@ footer {
     }
 
     footer {
-        display: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
+
+    .footer-page-links li , .footer-socials-links li {
+        display:block;
+        text-align: center;
+    }
+
+    .footer-page-links, .footer-socials-links{
+        display: block
+    }
+    
+
     .card-intersect-shadow-mobile{
         background-color: var(--dark-primary-color);
         color: white;

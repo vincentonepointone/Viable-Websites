@@ -1,5 +1,34 @@
 window.addEventListener("load", (event) => {
-    
+
+
+
+
+
+
+
+//Ambient pallete color changer
+let red = 0;
+let green = 0;
+let blue = 0;
+setInterval(ambianceStart, 1)
+
+function ambianceStart ()  {
+    function randomColorParam(){
+        return Math.floor(Math.random() * 256)
+    }
+
+    let colorz = `rgba(${randomColorParam()},${randomColorParam()},${randomColorParam()},1)`
+    console.log(colorz)
+    document.body.style.background = colorz;
+    console.log(red, green , blue)
+}
+
+
+
+
+
+
+
 // Main banner slide show
 const slideShowElements = document.querySelector(".text-slideshow").children;
 
