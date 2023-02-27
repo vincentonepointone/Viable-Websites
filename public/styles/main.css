@@ -167,7 +167,6 @@ h1 {
 }
 
 .card {
-    transition: background 7s border 7s;
     border: var(--secondary-color) solid 2px;
     background-color: var(--primary-color);
     flex-grow: 1;
@@ -175,7 +174,7 @@ h1 {
     border-radius: 20px;
     margin: 1rem 1rem;
     box-shadow: 3px 3px  var(--shadow-color);
-    transition: background-color 0.7s, color 0.7s, box-shadow 1.5s;
+    transition: background-color 7s, border 7s;
 }
 
 .card ul{
@@ -189,6 +188,7 @@ h1 {
 
 @media only screen and (min-width: 768px) {
     .card:hover{
+        transition: background 0.7s, color 0.7s, box-shadow 1.5s;
         background-color: var(--dark-primary-color);
         color: white;
         box-shadow: 30px 30px  var(--shadow-color);
@@ -211,9 +211,9 @@ h1 {
 }
 
 footer {
-    transition: background 7s border 7s;
+    transition: background 7s, box-shadow 7s;
     display: flex;
-    background-color: var(--primary-color);
+    background: var(--primary-color);
     border-top: var(--secondary-color);
     box-shadow: var(--shadow-color) solid 1px;
     flex-direction: column;
