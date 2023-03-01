@@ -10,7 +10,7 @@ window.addEventListener("load", (event) => {
 let red = 0;
 let green = 0;
 let blue = 0;
-setInterval(ambianceStart, 5000 )
+setInterval(ambianceStart, 15000 )
 
 function ambianceStart ()  {
     function randomColorParam(){
