@@ -155,9 +155,9 @@ nav {
 .parallax {
       /* The image used */
   background-image: url("../images/pexels-pixabay-39284.jpg");
-
-  /* Set a specific height
-  min-height: 500px;  */
+/* 
+  Set a specific height */
+  min-height: 500px; 
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;

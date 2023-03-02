@@ -7,33 +7,55 @@ window.addEventListener("load", (event) => {
 
 
 //Ambient pallete color changer
-let red = 0;
-let green = 0;
-let blue = 0;
 setInterval(ambianceStart, 15000 )
 
-function ambianceStart ()  {
+function ambianceStart()  {
     function randomColorParam(){
         return Math.floor(80 + Math.random() * 200 - 80)
     }
 
-    let colorz = `rgba(${randomColorParam()},${randomColorParam()},${randomColorParam()},0.500)`;
+    let primaryColor = `rgba(${randomColorParam()},${randomColorParam()},${randomColorParam()},0.60)`;
     let secondaryColor = `rgba(${randomColorParam()},${randomColorParam()},${randomColorParam()})`;
-    console.log(colorz)
-    console.log(red, green , blue)
-
     var r = document.querySelector(':root');
-    r.style.setProperty('--primary-color', colorz);
+    r.style.setProperty('--primary-color', primaryColor);
     r.style.setProperty('--secondary-color', secondaryColor);
+}
+
+// Home page Banner slide show images
+const imageDiv = document.querySelector('.parallax');
+const imageUrlArray = [
+    './images/pexels-designecologist-1779487.jpg',
+    './images/pexels-miguel-á-padriñán-1591058.jpg',
+    './images/pexels-oleksandr-pidvalnyi-9822732 (1).jpg',
+    './images/pexels-photomix-company-230544.jpg',
+    './images/pexels-pixabay-39284.jpg',
+    './images/pexels-tobias-dziuba-927629.jpg',
+]
+
+let imageIterator = 0;
+setInterval(slideshowImagesStart, 15000);
+imageUrlArray.forEach(element => {
+    let url = element;
+    var img = new Image();
+    img.src= url;
+    console.log(img)
+});
+function slideshowImagesStart() {
+    if(imageIterator ===  imageUrlArray.length) {
+        imageIterator = 0;
+    }
+    // let url = imageUrlArray[imageIterator];
+    // var img = new Image();
+    // console.log(img)
+    // img.src= url;
+    imageDiv.style.backgroundImage = `url('${imageUrlArray[imageIterator]}')`;
+    imageIterator++;
 }
 
 
 
 
-
-
-
-// Main banner slide show
+// Home page banner slide show text
 const slideShowElements = document.querySelector(".text-slideshow").children;
 
 const startSlideShow = function(){
