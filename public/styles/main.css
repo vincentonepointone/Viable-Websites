@@ -159,7 +159,7 @@ nav {
 
 .parallax {
       /* The image used */
-  background-image: url("/public/images/pexels-pixabay-39284.jpg");
+  background-image: url("../images/pexels-pixabay-39284.jpg");
 
   /* Set a specific height */
   min-height: 500px; 
@@ -375,6 +375,10 @@ footer {
 }
 /* Tablet */
 @media only screen and (max-width: 768px) {
+    .card {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
     .logo-text{
         font-size: 1rem;
         margin-left: 10px;
@@ -383,7 +387,9 @@ footer {
     nav {
         height: 8vh;
     }
-
+    .banner p, .banner h2 {
+        font-size: 2rem;
+    }
 }
 @keyframes tilt-shaking {
     0% { transform: rotate(0deg); }
