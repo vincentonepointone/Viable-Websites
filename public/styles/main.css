@@ -81,11 +81,6 @@ nav {
     white-space: nowrap;
     display:inline;
     margin: 0;
-    -webkit-transition: all 2.5s ;
-    -moz-transition: all 2.5s ;
-    -ms-transition: all 2.5s ;
-    -o-transition: all 2.5s ;
-    transition: all 2.5s ;
 }
 
 .burger-menu {
@@ -247,6 +242,7 @@ footer .copy-right {
 
 .footer-links-container  {
     display: flex;
+    flex-grow: 1fr;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -256,10 +252,15 @@ footer .copy-right {
 /* Mobile */
 @media only screen and (min-width: 768px) {
     .card:hover{
-        transition: background 0.7s, color 0.7s, box-shadow 1.5s !important ;
+        /* transition: background 0.7s, color 0.7s, box-shadow 1.5s;
         background-color: var(--dark-primary-color);
-        color: white;
-        box-shadow: 30px 30px  var(--shadow-color);
+        color: white; */
+        animation: card-background 1s forwards;
+        /* transition: background 1s !important; */
+        /* background: var(--dark-primary-color); */
+        /* color: white; */
+        /* box-shadow: 30px 30px  var(--shadow-color); */
+        /* box-shadow: 30px 30px  var(--shadow-color); */
     }
 }
 @media only screen and (max-width: 500px) {
@@ -305,11 +306,6 @@ footer .copy-right {
 
     .nav-page-links-ul{
         display: none;
-        -webkit-transition: all 2.5s ;
-        -moz-transition: all 2.5s ;
-        -ms-transition: all 2.5s ;
-        -o-transition: all 2.5s ;
-        transition: all 2.5s ;
         opacity: 0;
         display: none;
 
@@ -321,11 +317,6 @@ footer .copy-right {
 
     
     .nav-page-links-ul-mobile {
-        -webkit-transition: all 2.5s ;
-        -moz-transition: all 2.5s ;
-        -ms-transition: all 2.5s ;
-        -o-transition: all 2.5s ;
-        transition: all 2.5s ;
         width: 50vw;
         display:block;
         background-color: var(--primary-color);
@@ -376,9 +367,11 @@ footer .copy-right {
     
 
     .card-intersect-shadow-mobile{
-        background-color: var(--dark-primary-color);
-        color: white;
-        box-shadow: 30px 30px  var(--shadow-color);
+        animation: card-background 1s forwards;
+        /* transition: background 1s !important; */
+        /* background: var(--dark-primary-color); */
+        /* color: white; */
+        /* box-shadow: 30px 30px  var(--shadow-color); */
     }
 
 }
@@ -406,4 +399,17 @@ footer .copy-right {
     50% { transform: rotate(0eg); }
     75% { transform: rotate(-1deg); }
     100% { transform: rotate(0deg); }
+  }
+
+  @keyframes card-background {
+    100% { 
+        /* transition: background 1s, box-shadow !important;  */
+        background: var(--dark-primary-color) ;
+        box-shadow: 30px 30px  var(--shadow-color) ;
+        color: white;
+        }
+    /* 25% { transform: rotate(1deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-1deg); }
+    100% { transform: rotate(0deg); } */
   }
