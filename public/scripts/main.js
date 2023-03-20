@@ -24,12 +24,12 @@ function ambianceStart()  {
 // Home page Banner slide show images
 const imageDiv = document.querySelector('.parallax');
 const imageUrlArray = [
-    './images/pexels-designecologist-1779487.jpg',
-    './images/pexels-miguel-á-padriñán-1591058.jpg',
-    './images/pexels-oleksandr-pidvalnyi-9822732 (1).jpg',
-    './images/pexels-photomix-company-230544.jpg',
-    './images/pexels-pixabay-39284.jpg',
-    './images/pexels-tobias-dziuba-927629.jpg',
+    './images/pexels-designecologist-1779487.webp',
+    './images/pexels-miguel-á-padriñán-1591058.webp',
+    './images/pexels-oleksandr-pidvalnyi-9822732 (1).webp',
+    './images/pexels-photomix-company-230544.webp',
+    './images/pexels-pixabay-39284.webp',
+    './images/pexels-tobias-dziuba-927629.webp',
 ]
 
 let imageIterator = 0;
