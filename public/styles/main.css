@@ -212,6 +212,8 @@ h1 {
 .card-button:hover {
  cursor: pointer;   
  animation: tilt-shaking 0.3s infinite;
+ transition: rotate 2s;
+ rotate: -5deg;
 }
 
 .card-button {
@@ -256,6 +258,8 @@ footer .copy-right {
         background-color: var(--dark-primary-color);
         color: white; */
         animation: card-background 1s forwards;
+		transition: rotate 1s;
+		rotate: 3deg;
         /* transition: background 1s !important; */
         /* background: var(--dark-primary-color); */
         /* color: white; */
@@ -368,6 +372,8 @@ footer .copy-right {
 
     .card-intersect-shadow-mobile{
         animation: card-background 1s forwards;
+		transition: rotate 2s;
+		rotate: 3deg;
         /* transition: background 1s !important; */
         /* background: var(--dark-primary-color); */
         /* color: white; */
