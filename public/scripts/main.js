@@ -24,12 +24,12 @@ function ambianceStart()  {
 // Home page Banner slide show images
 const imageDiv = document.querySelector('.parallax');
 const imageUrlArray = [
-    './images/pexels-designecologist-1779487.webp',
-    './images/pexels-miguel-á-padriñán-1591058.webp',
-    './images/pexels-oleksandr-pidvalnyi-9822732 (1).webp',
-    './images/pexels-photomix-company-230544.webp',
-    './images/pexels-pixabay-39284.webp',
-    './images/pexels-tobias-dziuba-927629.webp',
+    '/Viable-Websites/public/images/pexels-designecologist-1779487.webp',
+    '/Viable-Websites/public/images/pexels-miguel-á-padriñán-1591058.webp',
+    '/Viable-Websites/public/images/pexels-oleksandr-pidvalnyi-9822732 (1).webp',
+    '/Viable-Websites/public/images/pexels-photomix-company-230544.webp',
+    '/Viable-Websites/public/images/pexels-pixabay-39284.webp',
+    '/Viable-Websites/public/images/pexels-tobias-dziuba-927629.webp',
 ]
 
 let imageIterator = 0;
