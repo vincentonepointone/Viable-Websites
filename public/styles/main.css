@@ -154,7 +154,7 @@ nav {
 
 .parallax {
       /* The image used */
-  /* background-image: url("../images/pexels-pixabay-39284.webp"); */
+  background-image: url("../images/pexels-pixabay-39284.webp");
 /* 
   Set a specific height */
   min-height: 500px; 
