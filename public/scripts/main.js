@@ -39,7 +39,7 @@ imageUrlArray.forEach(element => {
     img.src= url;
     console.log(img)
 });
-//setInterval(slideshowImagesStart, 15000);
+setInterval(slideshowImagesStart, 15000);
 function slideshowImagesStart() {
     if(imageIterator ===  imageUrlArray.length) {
         imageIterator = 0;
