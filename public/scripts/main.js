@@ -122,9 +122,12 @@ burgerMenu.addEventListener('click', () => {
     }
 })
 
+var x = window.matchMedia("(max-width: 700px)");
+  if (x.matches) { // If media query matches
 
 // Card Animations when intersecting with the view port
 let callback = (entries, observer) => {
+	console.log('call back');
     entries.forEach((entry) => {
         if (entry.intersectionRatio > 0.90) {
             entry.target.classList.add("card-intersect-shadow-mobile");
@@ -167,4 +170,8 @@ let target = document.querySelectorAll('.card');
 observer.observe(target[0]);
 observer.observe(target[1]);
 observer.observe(target[2]);
+
+   
+  } else {
+  }
 }, false);
