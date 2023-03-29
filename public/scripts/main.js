@@ -33,13 +33,13 @@ const imageUrlArray = [
 ]
 
 let imageIterator = 0;
-setInterval(slideshowImagesStart, 15000);
 imageUrlArray.forEach(element => {
     let url = element;
     var img = new Image();
     img.src= url;
     console.log(img)
 });
+//setInterval(slideshowImagesStart, 15000);
 function slideshowImagesStart() {
     if(imageIterator ===  imageUrlArray.length) {
         imageIterator = 0;
@@ -167,7 +167,4 @@ let target = document.querySelectorAll('.card');
 observer.observe(target[0]);
 observer.observe(target[1]);
 observer.observe(target[2]);
-
-
-// End of onload function
 }, false);

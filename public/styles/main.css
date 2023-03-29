@@ -75,7 +75,7 @@ nav {
 .nav-page-links-ul {
     position: absolute;
     right: 0;
-    width: 60vw;
+    width: 60%;
     padding-inline-start:0;
     flex-grow: 1;
     white-space: nowrap;
@@ -135,7 +135,7 @@ nav {
     /* background-position: center; */
     /* background-attachment: fixed; */
     /* background-size: 100VW; */
-    width: 98vw;
+    width: 100%;
     height: 85vh;
     display: flex;
     flex-direction: column;
@@ -154,7 +154,7 @@ nav {
 
 .parallax {
       /* The image used */
-  background-image: url("../images/pexels-pixabay-39284.webp");
+  /* background-image: url("../images/pexels-pixabay-39284.webp"); */
 /* 
   Set a specific height */
   min-height: 500px; 
@@ -321,7 +321,7 @@ footer .copy-right {
 
     
     .nav-page-links-ul-mobile {
-        width: 50vw;
+        width: 50%;
         display:block;
         background-color: var(--primary-color);
         border-bottom: var(--secondary-color);
