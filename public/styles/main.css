@@ -174,10 +174,11 @@ h1 {
 .cards-heading {
     text-align: center;
     font-weight: bold;
-    font-size: 26px;
+    font-size: 30px;
 }
 
 .card-heading {
+	font-size: 22px;
     position: absolute;
     top :20px;
 }
