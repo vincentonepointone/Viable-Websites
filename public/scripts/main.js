@@ -1,11 +1,5 @@
 window.addEventListener("load", (event) => {
 
-
-
-
-
-
-
 //Ambient pallete color changer
 setInterval(ambianceStart, 15000 )
 
@@ -37,7 +31,6 @@ imageUrlArray.forEach(element => {
     let url = element;
     var img = new Image();
     img.src= url;
-    console.log(img)
 });
 setInterval(slideshowImagesStart, 15000);
 function slideshowImagesStart() {
@@ -127,7 +120,6 @@ var x = window.matchMedia("(max-width: 700px)");
 
 // Card Animations when intersecting with the view port
 let callback = (entries, observer) => {
-	console.log('call back');
     entries.forEach((entry) => {
         if (entry.intersectionRatio > 0.90) {
             entry.target.classList.add("card-intersect-shadow-mobile");
