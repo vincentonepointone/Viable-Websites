@@ -1,14 +1,14 @@
 window.addEventListener("load", (event) => {
 
 //Ambient pallete color changer
-setInterval(ambianceStart, 15000 )
+setInterval(ambianceStart, 30000 )
 
 function ambianceStart()  {
     function randomColorParam(){
-        return Math.floor(80 + Math.random() * 200 - 80)
+        return Math.floor(Math.random() * 200)
     }
 
-    let primaryColor = `rgba(${randomColorParam()},${randomColorParam()},${randomColorParam()},0.60)`;
+    let primaryColor = `rgba(${randomColorParam()},${randomColorParam()},${randomColorParam()})`;
     let secondaryColor = `rgba(${randomColorParam()},${randomColorParam()},${randomColorParam()})`;
     var r = document.querySelector(':root');
     r.style.setProperty('--primary-color', primaryColor);
@@ -37,10 +37,6 @@ function slideshowImagesStart() {
     if(imageIterator ===  imageUrlArray.length) {
         imageIterator = 0;
     }
-    // let url = imageUrlArray[imageIterator];
-    // var img = new Image();
-    // console.log(img)
-    // img.src= url;
     imageDiv.style.backgroundImage = `url('${imageUrlArray[imageIterator]}')`;
     imageIterator++;
 }
@@ -60,8 +56,7 @@ const startSlideShow = function(){
             element.style.opacity = 0;
         });  
     }
-    // hideElements(); //Hiden with CSS
-
+    // hideElements(); //Hidden with CSS
     let elementIterator = 0;
     setInterval(() => {
         if(elementIterator === elementsArray.length){
